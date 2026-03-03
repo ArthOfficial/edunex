@@ -43,11 +43,7 @@
 | `PRIVATE/security-keys.md` | Key reference & rotation guide | — |
 | `vite.config.ts` | Build system configuration | ❌ `npm run dev` fails |
 | `index.html` | App entry point | ❌ Nothing renders |
-| `src/lib/supabase.ts` | Supabase client initialization | ❌ No database access |
-| `src/context/AuthContext.tsx` | Authentication provider | ❌ Login impossible |
-| `supabase/schema.sql` | 54-table database schema | ❌ No database structure |
-| `supabase/setup.sql` | RLS policies & seed data | ❌ No security layer |
-| `.MD/*` | Internal architecture docs | — |
+| `Many More` | Many More | — |
 
 </details>
 
