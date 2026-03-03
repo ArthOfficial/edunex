@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="https://komarev.com/ghpvc/?username=ArthOfficial&repo=edunex&label=Repository%20Views&color=0e75b6&style=for-the-badge" alt="Profile Views"/>
+</p>
+
+<p align="center">
   <img src="https://img.icons8.com/3d-fluency/94/graduation-cap.png" width="80" alt="EduNex Logo"/>
 </p>
 
