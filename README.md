@@ -43,7 +43,7 @@
 | `PRIVATE/security-keys.md` | Key reference & rotation guide | — |
 | `vite.config.ts` | Build system configuration | ❌ `npm run dev` fails |
 | `index.html` | App entry point | ❌ Nothing renders |
-| `Many More` | Many More | — |
+| **Many More** | **Many More** | **Many More** |
 
 </details>
 
