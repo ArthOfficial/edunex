@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-emerald-900: #1A3C34;
+  --color-emerald-800: #204A40;
+  --color-emerald-700: #2C5F53;
+  --color-emerald-600: #3A7A6A;
+  --color-emerald-500: #4B9C88;
+  --color-emerald-50: #F0FDF9;
+
+  --color-lime-400: #B8F28B;
+  --color-lime-300: #CFF7AE;
+  --color-lime-100: #EDFCE2;
+  --color-lime-50: #F7FEF2;
+
+  --color-cream: #FDFBF7;
+  --color-cream-dark: #F5F2EA;
+
+  /* Claymorphism Theme Colors */
+  --color-background: #FAF9F6;
+  --color-foreground: #1C1917;
+  --color-primary: #0F766E;
+  --color-muted: #78716C;
+  --color-teal-light: #5EEAD4;
+  --color-yellow-light: #FDE047;
+
+  --shadow-soft: 0 4px 40px rgba(26, 60, 52, 0.05);
+  --shadow-card: 0 10px 30px -5px rgba(26, 60, 52, 0.08);
+  --shadow-glow: 0 0 20px rgba(184, 242, 139, 0.5);
+
+  /* Claymorphism Shadows */
+  --shadow-clay: 20px 20px 40px #E6E4E0, -20px -20px 40px #FFFFFF, inset 2px 2px 10px rgba(255, 255, 255, 0.9);
+  --shadow-clay-hover: 12px 12px 20px #E6E4E0, -12px -12px 20px #FFFFFF;
+  --shadow-clay-inner: inset 6px 6px 12px #E6E4E0, inset -6px -6px 12px #FFFFFF;
+}
+
+@layer base {
+  :root {
+    --font-family: "Plus Jakarta Sans", "Outfit", sans-serif;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-family);
+  }
+}
+
+@layer components {
+  .clay-card {
+    background: #FFFFFF;
+    border-radius: 2rem;
+    box-shadow: var(--shadow-clay);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease;
+  }
+
+  .clay-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .clay-input {
+    background: #FAF9F6;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-clay-inner);
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .clay-input:focus {
+    outline: none;
+    box-shadow:
+      inset 8px 8px 16px #E6E4E0,
+      inset -8px -8px 16px #FFFFFF,
+      0 0 0 2px rgba(15, 118, 110, 0.1);
+  }
+
+  .clay-btn {
+    background: #1C1917;
+    color: white;
+    border-radius: 9999px;
+    box-shadow: 8px 8px 16px #E6E4E0, -8px -8px 16px #FFFFFF;
+    transition: all 0.3s ease;
+  }
+
+  .clay-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-clay-hover);
+    background: #000000;
+  }
+
+  .clay-btn-outline {
+    background: #FFFFFF;
+    color: #1C1917;
+    border-radius: 9999px;
+    box-shadow: 6px 6px 12px #E6E4E0, -6px -6px 12px #FFFFFF;
+    border: 1px solid #F3F4F6;
+    transition: all 0.3s ease;
+  }
+
+  .clay-btn-outline:hover {
+    transform: translateY(-2px);
+    color: #0F766E;
+    box-shadow: 8px 8px 16px #E6E4E0, -8px -8px 16px #FFFFFF;
+  }
+
+  .nav-item {
+    color: #78716C;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .nav-item.active {
+    background: #FFFFFF;
+    color: #0F766E;
+    font-weight: 700;
+    box-shadow: 4px 4px 8px #E6E4E0, -4px -4px 8px #FFFFFF;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.beam {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.beam-left {
+  background: #5EEAD4;
+  top: -100px;
+  left: -100px;
+}
+
+.beam-right {
+  background: #FDE047;
+  bottom: -100px;
+  right: -100px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.transition-view {
+  transition: opacity 0.3s ease-in-out;
+}
+
+@keyframes growBar {
+  from {
+    height: 0;
+  }
+}
+
+.bar-animate {
+  animation: growBar 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transform-origin: bottom;
+}
